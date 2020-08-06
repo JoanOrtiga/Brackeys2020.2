@@ -5512,6 +5512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552653788}
   - component: {fileID: 1552653789}
+  - component: {fileID: 1552653790}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -5574,6 +5575,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1552653790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552653787}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55abaf10fa11f945ba5feb03634ff2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1555532478
 GameObject:
   m_ObjectHideFlags: 0
@@ -6409,6 +6422,10 @@ PrefabInstance:
     - target: {fileID: 4660158560815542589, guid: 0b8b79a25d7ace0459ee54e6415a4ce5, type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4660158561136243908, guid: 0b8b79a25d7ace0459ee54e6415a4ce5, type: 3}
+      propertyPath: countDownTime
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b8b79a25d7ace0459ee54e6415a4ce5, type: 3}
