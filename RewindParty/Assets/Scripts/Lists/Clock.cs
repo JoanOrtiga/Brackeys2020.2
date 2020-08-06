@@ -9,7 +9,7 @@ public class Clock : MonoBehaviour
 {
     public bool pause;
 
-    [SerializeField] private int startHour, startMinutes, startSeconds;
+    [SerializeField] private int startHour = 1, startMinutes = 1, startSeconds = 1;
 
     /// <summary>
     /// Speed at which time goes

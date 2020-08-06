@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BackTrackManager
   - Timer
+  - Wall
+  - MoveableBox
   layers:
   - Default
   - TransparentFX
@@ -40,6 +42,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2710288213
+    locked: 0
+  - name: Ground
+    uniqueID: 632690157
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wall
+    uniqueID: 892909719
+    locked: 0
+  - name: Wall2
+    uniqueID: 331640281
+    locked: 0
+  - name: WallDetails
+    uniqueID: 4017477053
+    locked: 0
+  - name: Boxes
+    uniqueID: 2029237311
+    locked: 0
+  - name: Player
+    uniqueID: 1560892355
     locked: 0
