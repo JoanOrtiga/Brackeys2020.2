@@ -121,6 +121,13 @@ public class BackTrackingBox : MonoBehaviour
                 MoveBoxForward();
             }
         }
+
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            //movingToPos = beforeMovingPos;
+
+            gettingMoved = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -129,8 +136,6 @@ public class BackTrackingBox : MonoBehaviour
         {
             movingTime = timeToMove;
         }
-        
-        print(collision.gameObject.tag);
 
         if (collision.gameObject.CompareTag("Wall"))
         {
