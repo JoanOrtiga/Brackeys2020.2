@@ -52,8 +52,12 @@ public class BackTrackingBox : MonoBehaviour
         {
             if (gettingMoved)
                 MoveBoxForward();
+            else
+                transform.position = Vector2.Lerp(transform.position, BackTrackGrid.GetNearestPointOnGrid(transform.position), lerpValue);
 
             Vector2 newPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
+
+            print(newPos);
 
             if (lastTrackPos != newPos)
             {
@@ -61,6 +65,8 @@ public class BackTrackingBox : MonoBehaviour
                 lastTrackPos = newPos;
                 goingBackPos = newPos;
             }
+
+            
         }
         else
         {
@@ -74,10 +80,9 @@ public class BackTrackingBox : MonoBehaviour
 
                 if(posIndex < 0)
                 {
-
                     trackPositions.Clear();
-                    goingBackAnim = false;
 
+                    goingBackAnim = false;
                     GetComponent<GhostTrail>().enabled = false;
 
                     return;
@@ -86,7 +91,7 @@ public class BackTrackingBox : MonoBehaviour
                 goingBackPos = trackPositions[posIndex];
             }
 
-            transform.position = Vector2.Lerp(transform.position, goingBackPos, lerpValue);
+            transform.position = Vector2.Lerp(transform.position, goingBackPos, time / timeBetweenAnim);
         }
     }
 
@@ -107,6 +112,7 @@ public class BackTrackingBox : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+
         if (collision.gameObject.CompareTag("Player"))
         {
             movingTime -= Time.deltaTime;
@@ -135,7 +141,14 @@ public class BackTrackingBox : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             movingTime = timeToMove;
+
+            if (goingBackAnim)
+            {
+                Destroy(collision.gameObject);
+            }
         }
+
+
 
         if (collision.gameObject.CompareTag("Wall"))
         {

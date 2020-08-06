@@ -12,9 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     private float inputY;
 
+
+    private Transform light;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        light = transform.GetChild(0);
     }
 
     void Update()
@@ -35,5 +40,13 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving()
     {
         return inputX != 0 || inputY != 0;
+    }
+
+    private void OnDestroy()
+    {
+        print("hola");
+        light.parent = null;
+        light.GetComponent<AtenuateLight>().enabled = true;
+        print(light.parent);
     }
 }
