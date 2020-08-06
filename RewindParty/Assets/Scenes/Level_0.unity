@@ -380,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631627857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.47, y: -0.12, z: 0}
+  m_LocalPosition: {x: 5.531, y: -0.012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 439625347}
@@ -769,9 +769,41 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 424ddfa7efb88044ebec3023045ebfb1, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 16
     m_Data: {fileID: 21300000, guid: f434645ee424b4e4b8a19f80927920dc, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 16
     m_Data:
@@ -798,7 +830,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -8, y: 0, z: 0}
-  m_Size: {x: 16, y: 4, z: 1}
+  m_Size: {x: 28, y: 6, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -838,17 +870,23 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 460149209}
     m_ColliderPaths:
-    - - X: -90000000
-        Y: 20000000
+    - - X: 89999900
+        Y: 40156289
+      - X: 89999959
+        Y: 40156348
       - X: 90000000
-        Y: 20000000
+        Y: 40156348
       - X: 90000000
         Y: 50000000
       - X: -90000000
         Y: 50000000
+      - X: -90000000
+        Y: 20000000
+      - X: 89999900
+        Y: 20000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 8.99997, y: 2}
+    - - {x: 8.999961, y: 2}
       - {x: 8.99997, y: 5}
       - {x: -9, y: 4.999971}
       - {x: -8.99997, y: 2}
@@ -4353,11 +4391,11 @@ PrefabInstance:
       objectReference: {fileID: 820424962}
     - target: {fileID: 8203128927450900506, guid: fbfc795a9cbbe8f4aa2dccf8af8c1242, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.41
+      value: 8.2
       objectReference: {fileID: 0}
     - target: {fileID: 8203128927450900506, guid: fbfc795a9cbbe8f4aa2dccf8af8c1242, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 8203128927450900506, guid: fbfc795a9cbbe8f4aa2dccf8af8c1242, type: 3}
       propertyPath: m_LocalPosition.z
