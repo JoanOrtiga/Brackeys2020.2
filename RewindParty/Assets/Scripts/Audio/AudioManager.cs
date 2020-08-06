@@ -67,7 +67,6 @@ public class AudioManager : MonoBehaviour
     {
         music = GetComponent<AudioSource>();
         int i = UnityEngine.Random.Range(0, musicClips.Length);
-        print(i);
         music.volume = MusicVolume;
         music.clip = musicClips[i];
         music.loop = true;
