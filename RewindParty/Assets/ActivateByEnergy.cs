@@ -18,14 +18,11 @@ public class ActivateByEnergy : MonoBehaviour
         {
             collider2.enabled = false;
 
-            print("Open");
             //Here we changesprite and disable collider.
         }
         else
         {
             collider2.enabled = true;
-
-            print("Close");
         }
     }
 

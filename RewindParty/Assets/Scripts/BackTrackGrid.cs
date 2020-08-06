@@ -15,6 +15,8 @@ public class BackTrackGrid : MonoBehaviour
 
     private CountDownTimer countDownTimer;
 
+    [SerializeField] private float timeScaled = 0.8f;
+
     private void Awake()
     {
         grid = GetComponent<Grid>();
@@ -40,18 +42,21 @@ public class BackTrackGrid : MonoBehaviour
 
     private void StartBackTracking()
     {
+        Time.timeScale = timeScaled;
+
         isBackTracking = true;
     }
 
     private void Update()
     {
-
         if (isBackTracking)
         {
             if(CheckAllBackTrackingObjects() == false)
             {
                 countDownTimer.countingDown = true;
                 isBackTracking = false;
+
+                Time.timeScale = 1f;
             }
         }
     }
