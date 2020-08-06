@@ -56,8 +56,6 @@ public class BackTrackingBox : MonoBehaviour
 
             Vector2 newPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
 
-            print(newPos);
-
             if (lastTrackPos != newPos)
             {
                 trackPositions.Add(newPos);
@@ -100,7 +98,7 @@ public class BackTrackingBox : MonoBehaviour
 
         if(posIndex <= 0)
         {
-            goingBackAnim = false;
+            goingBackAnim = false; 
         }
         else
         {
