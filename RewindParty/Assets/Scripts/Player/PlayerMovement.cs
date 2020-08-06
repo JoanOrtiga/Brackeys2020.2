@@ -25,12 +25,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (inputX != 0 || inputY != 0)
+        if (isMoving())
         {
             Vector2 direction = Vector2.ClampMagnitude(new Vector2(inputX, inputY), 1f);
 
             rb.MovePosition(new Vector2(rb.position.x + direction.x * movementSpeed * Time.deltaTime, rb.position.y + direction.y * movementSpeed * Time.deltaTime));
         }
-
+    }
+    public bool isMoving()
+    {
+        return inputX != 0 || inputY != 0;
     }
 }
