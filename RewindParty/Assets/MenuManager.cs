@@ -31,6 +31,11 @@ public class MenuManager : MonoBehaviour
             case "Pause":
                 pause.Show();
                 break;
+            default:
+                HideAll();
+                Time.timeScale = 1f;
+                currentState = state.Play;
+                break;
         }
     }
     private void HideAll()

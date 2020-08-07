@@ -24,6 +24,7 @@ public class ActivateByEnergy : MonoBehaviour
             {
                 shake = true;
                 Camera.main.GetComponent<CameraShake>().Shake(0.5f, 0.015f);
+                AudioManager.AudioInstance.Play("Door");
             }
             //Here we changesprite and disable collider.
         }            
@@ -35,6 +36,7 @@ public class ActivateByEnergy : MonoBehaviour
             {
                 shake = false;
                 Camera.main.GetComponent<CameraShake>().Shake(0.4f, 0.012f);
+                AudioManager.AudioInstance.Play("Door");
             }
         }
     }
