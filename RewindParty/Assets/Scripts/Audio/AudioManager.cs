@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
 
     private AudioSource music;
+    [SerializeField] private bool menu = false;
     [SerializeField] private AudioClip[] musicClips;
     [Range(0f, 1f)][SerializeField] private float MusicVolume;
     public static AudioManager AudioInstance;
@@ -66,7 +67,16 @@ public class AudioManager : MonoBehaviour
     private void MusicSetUp()
     {
         music = GetComponent<AudioSource>();
-        int i = UnityEngine.Random.Range(0, musicClips.Length);
+        int i;
+        if (menu)
+        {
+            i = musicClips.Length-1;
+        }
+        else
+        {
+            i = UnityEngine.Random.Range(0, musicClips.Length-1);
+
+        }
         music.volume = MusicVolume;
         music.clip = musicClips[i];
         music.loop = true;
