@@ -80,23 +80,21 @@ public class BoxMovement : MonoBehaviour
                 beforeMovingPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
                 movingToPos = movingTo();
 
-                RaycastHit2D checkWall;
+                Collider2D checkWall;
 
-                checkWall = Physics2D.BoxCast(movingToPos, new Vector2(0.95f, 0.95f), 0f, Vector2.zero);
+                checkWall = Physics2D.OverlapBox(movingToPos, new Vector2(0.95f, 0.95f), 0);
 
                 print(checkWall);
 
-                if (checkWall)
+                if (checkWall != null)
                 {
-                    
-
-                    if (!checkWall.transform.CompareTag("Wall"))
+                    if (checkWall.tag == "Wall")
                     {
-                        gettingMoved = true;
+                        countdownBoxMovement = timeBoxMovement;
                     }
                     else
                     {
-                        countdownBoxMovement = timeBoxMovement;
+                        gettingMoved = true;
                     }
                 }
                 else
