@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Marc.unity
+    guid: ebbdcb769ac088a4aa9e3f22fb90b91d
+  - enabled: 1
     path: Assets/Scenes/Legacy/Level_1_Tutorial.unity
     guid: b72360eb8dc6a9441870ccbd2671e137
   - enabled: 1
