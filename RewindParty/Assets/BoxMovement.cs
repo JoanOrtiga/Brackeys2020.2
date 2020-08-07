@@ -84,8 +84,6 @@ public class BoxMovement : MonoBehaviour
 
                 checkWall = Physics2D.OverlapBox(movingToPos, new Vector2(0.95f, 0.95f), 0);
 
-                print(checkWall);
-
                 if (checkWall != null)
                 {
                     if (checkWall.tag == "Wall")
