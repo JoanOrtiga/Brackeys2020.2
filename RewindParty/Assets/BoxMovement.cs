@@ -18,17 +18,12 @@ public class BoxMovement : MonoBehaviour
     private Vector2 beforeMovingPos;
     private Vector2 movingToPos;
 
-    private Collider2D wallCollider;
-
-    private bool pusheable = true;
-
     private void Start()
     {
         boxMovementScript = GetComponent<BackTrackingBox>();
 
         countdownBoxMovement = timeBoxMovement;
-
-        beforeMovingPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
+        transform.position = BackTrackGrid.GetNearestPointOnGrid(transform.position);
     }
 
     void Update()
@@ -41,9 +36,9 @@ public class BoxMovement : MonoBehaviour
             }
             else
             {
-                transform.position = Vector2.Lerp(transform.position, beforeMovingPos, movementSpeedLerpValue);
+                transform.position = Vector2.Lerp(transform.position, transform.position, movementSpeedLerpValue);
             }
-                
+
         }
     }
 
@@ -69,7 +64,7 @@ public class BoxMovement : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && pusheable)
+        if (collision.gameObject.CompareTag("Player"))
         {
             countdownBoxMovement -= Time.deltaTime;
 
@@ -85,8 +80,31 @@ public class BoxMovement : MonoBehaviour
                 beforeMovingPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
                 movingToPos = movingTo();
 
-                gettingMoved = true;
-                pusheable = false;
+                RaycastHit2D checkWall;
+
+                checkWall = Physics2D.BoxCast(movingToPos, new Vector2(0.95f, 0.95f), 0f, Vector2.zero);
+
+                print(checkWall);
+
+                if (checkWall)
+                {
+                    
+
+                    if (!checkWall.transform.CompareTag("Wall"))
+                    {
+                        gettingMoved = true;
+                    }
+                    else
+                    {
+                        countdownBoxMovement = timeBoxMovement;
+                    }
+                }
+                else
+                {
+                    gettingMoved = true;
+                }
+
+
             }
         }
         else if (collision.gameObject.CompareTag("Wall"))
