@@ -52,6 +52,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: nonLighting
+    uniqueID: 875694495
+    locked: 0
   - name: Wall
     uniqueID: 892909719
     locked: 0
