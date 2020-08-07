@@ -17,9 +17,11 @@ public class BoxMovement : MonoBehaviour
 
     private Vector2 beforeMovingPos;
     private Vector2 movingToPos;
+    private CameraShake main;
 
     private void Start()
     {
+        main = Camera.main.GetComponent<CameraShake>();
         boxMovementScript = GetComponent<BackTrackingBox>();
 
         countdownBoxMovement = timeBoxMovement;
@@ -54,6 +56,7 @@ public class BoxMovement : MonoBehaviour
             if (boxMovementScript.isBackTracking())
             {
                 Destroy(collision.gameObject);
+                main.Shake(0.075f, 0.05f);
             }
         }
         else if (collision.gameObject.CompareTag("Wall"))
@@ -93,11 +96,13 @@ public class BoxMovement : MonoBehaviour
                     else
                     {
                         gettingMoved = true;
+                        main.Shake(0.075f, 0.01f);
                     }
                 }
                 else
                 {
                     gettingMoved = true;
+                    main.Shake(0.075f, 0.01f);
                 }
 
 

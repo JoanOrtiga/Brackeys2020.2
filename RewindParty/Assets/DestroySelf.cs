@@ -8,6 +8,10 @@ public class DestroySelf : MonoBehaviour
 
     private void Awake()
     {
+        if (Time.timeSinceLevelLoad < 1)
+        {
+            Destroy(gameObject, 0);
+        }
         Destroy(gameObject, destroyTime);
     }
 }

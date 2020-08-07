@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-    public float force;
-    public float duration;
     private float cooldown;
+    private Vector3 initialPos;
     private void Start()
     {
-        cooldown = duration;
+        initialPos = transform.position;
     }
     //Per fer la funció: Camera.main.GetComponent<CameraShake>().Shake();
-    public void Shake()
+    public void Shake(float duration, float force)
     {
-        StartCoroutine(StartShaking());
+        StartCoroutine(StartShaking(duration, force));
     }
-    private IEnumerator StartShaking()
+    private IEnumerator StartShaking(float duration, float force)
     {
-        Vector3 initialPos = transform.localPosition;
         cooldown = duration;
 
         while (cooldown > 0)
@@ -26,10 +24,10 @@ public class CameraShake : MonoBehaviour
             float xShakePos = initialPos.x + Random.Range(-1f, 1f) * force;
             float yShakePos = initialPos.y + Random.Range(-1f, 1f) * force;
 
-            transform.localPosition = new Vector3(xShakePos, yShakePos, initialPos.z);
+            transform.position = new Vector3(xShakePos, yShakePos, initialPos.z);
             cooldown -= Time.deltaTime;
             yield return null;
         }
-        transform.localPosition = initialPos; //avoid bugs, camera can end placed in local position wich is not the one we want so we assign the initial one.
+        transform.position = initialPos;
     }
 }
