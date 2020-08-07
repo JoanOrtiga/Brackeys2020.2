@@ -18,8 +18,12 @@ public class BoxMovement : MonoBehaviour
     private Vector2 beforeMovingPos;
     private Vector2 movingToPos;
 
+    private Rigidbody2D rb;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+
         boxMovementScript = GetComponent<BackTrackingBox>();
 
         countdownBoxMovement = timeBoxMovement;
@@ -40,6 +44,11 @@ public class BoxMovement : MonoBehaviour
             }
 
         }
+    }
+
+    private void LateUpdate()
+    {
+        rb.velocity = new Vector2(0, 0);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

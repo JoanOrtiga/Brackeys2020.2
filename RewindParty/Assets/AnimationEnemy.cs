@@ -14,9 +14,8 @@ public class AnimationEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-
         if (((Vector2)transform.position == lastPosition))
         {
             animator.SetBool("isMoving", false);
@@ -32,7 +31,5 @@ public class AnimationEnemy : MonoBehaviour
         }
 
         lastPosition = transform.position;
-    }
-
-    
+    }   
 }
