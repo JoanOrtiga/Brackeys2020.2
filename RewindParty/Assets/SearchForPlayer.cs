@@ -19,6 +19,7 @@ public class SearchForPlayer : MonoBehaviour
 
     private void Update()
     {
+
         if (!searching)
         {
             aipath.enabled = false;
@@ -33,9 +34,6 @@ public class SearchForPlayer : MonoBehaviour
 
             
         }
-
-        print(aipath.transform.name);
-        print(searching);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

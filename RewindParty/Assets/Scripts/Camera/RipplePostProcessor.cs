@@ -17,7 +17,6 @@ public class RipplePostProcessor : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            print("HOLA");
             this.Amount = this.MaxAmount;
             Vector3 pos = Input.mousePosition;
             this.RippleMaterial.SetFloat("_CenterX", pos.x);
