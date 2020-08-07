@@ -47,6 +47,5 @@ public class PlayerMovement : MonoBehaviour
         print("hola");
         light.parent = null;
         light.GetComponent<AtenuateLight>().enabled = true;
-        print(light.parent);
     }
 }
