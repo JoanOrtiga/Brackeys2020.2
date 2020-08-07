@@ -40,6 +40,7 @@ public class CountDownTimer : MonoBehaviour
             if (currentTime < 0)
             {
                 timeAt0.Invoke();
+                text.text = "0,00";
                 currentTime = countDownTime;
 
                 countingDown = false;
