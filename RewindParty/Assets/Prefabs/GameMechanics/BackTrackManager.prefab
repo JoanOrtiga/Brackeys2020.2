@@ -59,3 +59,4 @@ MonoBehaviour:
   gridSize: {x: 200, y: 200}
   backTrackObjects: []
   isBackTracking: 0
+  timeScaled: 0.75

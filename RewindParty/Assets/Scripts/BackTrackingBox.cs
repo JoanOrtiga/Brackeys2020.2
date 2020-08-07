@@ -14,8 +14,12 @@ public class BackTrackingBox : MonoBehaviour
     private float time;
     [SerializeField] private float timeBetweenAnim = 0.2f;
 
+    private BoxMovement boxMovementScript;
+
     private void Awake()
     {
+        boxMovementScript = GetComponent<BoxMovement>();
+
         trackPositions = new List<Vector2>();
 
         time = timeBetweenAnim;
@@ -40,12 +44,12 @@ public class BackTrackingBox : MonoBehaviour
         {
             Vector2 newPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
 
-            if (lastTrackPos != newPos)
+            if (lastTrackPos != newPos && !boxMovementScript.gettingMoved)
             {
                 trackPositions.Add(newPos);
                 lastTrackPos = newPos;
                 goingBackPos = newPos;
-            }  
+            }
         }
         else
         {
@@ -57,7 +61,7 @@ public class BackTrackingBox : MonoBehaviour
 
                 posIndex--;
 
-                if(posIndex < 0)
+                if (posIndex < 0)
                 {
                     trackPositions.Clear();
 
@@ -67,6 +71,22 @@ public class BackTrackingBox : MonoBehaviour
                     return;
                 }
 
+                Collider2D checkWall;
+
+                checkWall = Physics2D.OverlapBox(trackPositions[posIndex], new Vector2(0.95f, 0.95f), 0);
+
+                if (checkWall != null)
+                    if (checkWall.CompareTag("Wall"))
+                    {
+                        trackPositions.Clear();
+
+                        goingBackAnim = false;
+                        GetComponent<GhostTrail>().enabled = false;
+
+                        return;
+                    }
+
+
                 goingBackPos = trackPositions[posIndex];
             }
 
@@ -75,12 +95,12 @@ public class BackTrackingBox : MonoBehaviour
     }
 
     private void ResetPos()
-    { 
+    {
         posIndex = trackPositions.Count - 1;
 
-        if(posIndex <= 0)
+        if (posIndex <= 0)
         {
-            goingBackAnim = false; 
+            goingBackAnim = false;
         }
         else
         {
