@@ -10,7 +10,7 @@ public class BoxMovement : MonoBehaviour
 
     private Collision2DSideType collisionSide;
 
-    private bool gettingMoved;
+    [HideInInspector] public bool gettingMoved;
 
     [SerializeField] private float timeBoxMovement = 0.4f;
     private float countdownBoxMovement;
