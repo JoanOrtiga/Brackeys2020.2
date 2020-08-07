@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private float inputX;
     private float inputY;
 
-
     private Transform light;
 
     private void Awake()
@@ -44,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDestroy()
     {
-        print("hola");
         light.parent = null;
         light.GetComponent<AtenuateLight>().enabled = true;
     }
