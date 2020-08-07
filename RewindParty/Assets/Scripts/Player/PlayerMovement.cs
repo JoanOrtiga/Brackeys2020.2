@@ -41,6 +41,11 @@ public class PlayerMovement : MonoBehaviour
         return inputX != 0 || inputY != 0;
     }
 
+    private void LateUpdate()
+    {
+        rb.velocity = new Vector2(0, 0);
+    }
+
     private void OnDestroy()
     {
         light.parent = null;
