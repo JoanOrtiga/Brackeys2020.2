@@ -16,6 +16,7 @@ public class PressurePlate : EnergyActivators
         if(canPlayerActivate && tag == "Player" || canEnemyActivate && tag == "Enemy" || canBoxActivate && tag == "MoveableBox")
         {
             imActive = true;
+            AudioManager.AudioInstance.Play("Activate");
         }   
     }
 

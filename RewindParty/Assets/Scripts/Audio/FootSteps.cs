@@ -34,7 +34,6 @@ public class FootSteps : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isColliding = true;
-        AudioManager.AudioInstance.Play("PushBox");
     }
     private void OnCollisionExit2D(Collision2D collision)
     {

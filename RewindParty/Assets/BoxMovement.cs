@@ -106,12 +106,14 @@ public class BoxMovement : MonoBehaviour
                     {
                         gettingMoved = true;
                         main.Shake(0.075f, 0.01f);
+                        AudioManager.AudioInstance.Play("PushBox");
                     }
                 }
                 else
                 {
                     gettingMoved = true;
                     main.Shake(0.075f, 0.01f);
+                    AudioManager.AudioInstance.Play("PushBox");
                 }
 
 
