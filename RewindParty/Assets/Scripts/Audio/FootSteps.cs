@@ -18,7 +18,7 @@ public class FootSteps : MonoBehaviour
     }
     private void PlayFootStepts()
     {
-        if (movement.isMoving() && !isColliding)
+        if (movement.IsMoving && !isColliding)
         {
             if (checkSpeed < 0)
             {
