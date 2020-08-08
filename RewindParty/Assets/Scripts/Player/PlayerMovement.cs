@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveAnim(Vector2 dir)
     {
-        if(dir.x > 0.5 || dir.x < -0.5)
+        if(dir.x > 0.1 || dir.x < -0.1)
         {
             anim.SetBool("HorizontalMove", true);
 
@@ -77,5 +77,26 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("HorizontalMove", false);
         }
+
+        if (dir.y > 0.1 || dir.y < -0.1)
+        {
+          
+            if (dir.y < 0)
+            {
+                anim.SetBool("GoDown", true);
+                
+            }
+            else
+            {
+                anim.SetBool("GoUp", true);
+                
+            }
+        }
+        else
+        {
+            anim.SetBool("GoUp", false);
+            anim.SetBool("GoDown", false);
+        }
+
     }
 }
