@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Marc.unity
-    guid: ebbdcb769ac088a4aa9e3f22fb90b91d
-  - enabled: 1
-    path: Assets/Scenes/Legacy/Level_1_Tutorial.unity
-    guid: b72360eb8dc6a9441870ccbd2671e137
-  - enabled: 1
-    path: Assets/Scenes/Legacy/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: 91583c078ea95024da32d70c20b545fd
   - enabled: 1
     path: Assets/Scenes/Levels/lvl/1.unity
     guid: 341d6a164e5525c488d536d3f46c637b
@@ -22,5 +16,8 @@ EditorBuildSettings:
     guid: 7ae5fc64fa9de8b46935531508ac95bd
   - enabled: 1
     path: Assets/Scenes/Levels/lvl/3.unity
-    guid: 88ed379645b44164c8b503dfefbf2444
+    guid: 2f57ea6932604284c8c0dc009aa720d9
+  - enabled: 1
+    path: Assets/Scenes/Levels/lvl/5.unity
+    guid: c659bbc170ea63242a685a8639ea43e8
   m_configObjects: {}
