@@ -53,4 +53,13 @@ public class SearchForPlayer : MonoBehaviour
         if (collision.CompareTag("Player"))
             searching = false;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        if (collision2D.transform.CompareTag("Player"))
+        {
+            Destroy(collision2D.transform.gameObject);
+        }
+    }
+
 }

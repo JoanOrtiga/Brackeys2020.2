@@ -32,4 +32,5 @@ public class AnimationEnemy : MonoBehaviour
 
         lastPosition = transform.position;
     }   
+
 }

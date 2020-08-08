@@ -195,7 +195,7 @@ MonoBehaviour:
   rotationSpeed: 32400
   slowdownDistance: 0.6
   pickNextWaypointDist: 2
-  endReachedDistance: 1.2
+  endReachedDistance: 0.8
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
   - {x: -0.13383792, y: -0.35529062, z: -0.00000009206252}
   m_ShapePathHash: -1939756668
   m_Mesh: {fileID: 0}
-  m_InstanceId: -204212
+  m_InstanceId: -1866
 --- !u!114 &-41981468256566495
 MonoBehaviour:
   m_ObjectHideFlags: 0

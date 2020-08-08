@@ -86,6 +86,12 @@ public class BoxMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (boxMovementScript.isBackTracking())
+            {
+                Destroy(collision.gameObject);
+                main.Shake(0.075f, 0.05f);
+            }
+
             countdownBoxMovement -= Time.deltaTime;
 
             Vector2 pointOfContact = collision.contacts[0].normal;
