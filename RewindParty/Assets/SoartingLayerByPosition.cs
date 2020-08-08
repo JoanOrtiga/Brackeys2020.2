@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoartingLayerByPosition : MonoBehaviour
 {
     private SpriteRenderer spr;
+    public int offset = 0;
 
     private void Start()
     {
@@ -13,6 +14,6 @@ public class SoartingLayerByPosition : MonoBehaviour
 
     private void Update()
     {
-        spr.sortingOrder = (int)((transform.position.y) * -10);
+        spr.sortingOrder = (int)((transform.position.y) * -10) + offset;
     }
 }
