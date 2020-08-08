@@ -60,10 +60,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveAnim(Vector2 dir)
     {
-        if(dir.x > 0.1 || dir.x < -0.1)
-        {
-            anim.SetBool("HorizontalMove", true);
 
+        if(dir.x > 0.1 || dir.x < -0.1 || dir.y > 0.1 || dir.y < -0.1)
+        {
+            anim.SetBool("isMoving", true);
+            anim.SetFloat("DirX", dir.x);
+            anim.SetFloat("DirY", dir.y);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
+
+        if (dir.x > 0.1 || dir.x < -0.1)
+        {
             if (dir.x < 0)
             {
                 transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
@@ -73,30 +83,5 @@ public class PlayerMovement : MonoBehaviour
                 transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
             }
         }
-        else
-        {
-            anim.SetBool("HorizontalMove", false);
-        }
-
-        if (dir.y > 0.1 || dir.y < -0.1)
-        {
-          
-            if (dir.y < 0)
-            {
-                anim.SetBool("GoDown", true);
-                
-            }
-            else
-            {
-                anim.SetBool("GoUp", true);
-                
-            }
-        }
-        else
-        {
-            anim.SetBool("GoUp", false);
-            anim.SetBool("GoDown", false);
-        }
-
     }
 }
