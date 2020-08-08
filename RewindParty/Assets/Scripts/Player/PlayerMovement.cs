@@ -59,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
         light.parent = null;
         light.GetComponent<AtenuateLight>().enabled = true;
         reloadLevelScript.ReloadThisLevelAfterTime(2.5f);
+
+        AudioManager.AudioInstance.Play("Death");
     }
 
     private void MoveAnim(Vector2 dir)
