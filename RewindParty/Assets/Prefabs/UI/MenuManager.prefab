@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2012538320978788450}
   - component: {fileID: 3724030910723584631}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Cadenas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012397999, y: 119}
+  m_AnchoredPosition: {x: -19, y: 119}
   m_SizeDelta: {x: 943.921, y: 1035.9077}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2012538320978788450
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8846963308527179354}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.8842993
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2043,7 +2043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: 376}
+  m_AnchoredPosition: {x: 23, y: 376}
   m_SizeDelta: {x: 756.97217, y: 256.49307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8846963309550329136
@@ -4092,7 +4092,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8846963310400132417}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.8842993
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
