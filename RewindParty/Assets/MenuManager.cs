@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private MenuPanel pause;
     [SerializeField] private MenuPanel options;
     state currentState = state.Play;
+    [SerializeField] private bool showPause = true;
     enum state
     {
         Paused,
@@ -55,9 +56,18 @@ public class MenuManager : MonoBehaviour
             }
             else if (currentState == state.Play || currentState == state.Option)
             {
-                Show("Pause");
-                Time.timeScale = 0f;
-                currentState = state.Paused;
+                if (!showPause)
+                {
+                    HideAll();
+                    Time.timeScale = 1f;
+                    currentState = state.Play;
+                }
+                else
+                {
+                    Show("Pause");
+                    Time.timeScale = 0f;
+                    currentState = state.Paused;
+                }
             }
         }
     }

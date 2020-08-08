@@ -14,4 +14,9 @@ public class LoadFirstLevel : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
