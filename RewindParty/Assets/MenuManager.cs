@@ -61,4 +61,9 @@ public class MenuManager : MonoBehaviour
             }
         }
     }
+
+    public void ExitToMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
