@@ -2072,6 +2072,10 @@ PrefabInstance:
       propertyPath: blood
       value: 
       objectReference: {fileID: 1515686630977805478, guid: 21c4e66fab99a5c4dac0ee1a4e581dee, type: 3}
+    - target: {fileID: 1098275669875282946, guid: 793a8795e0874fb4bb61238ecc725fdb, type: 3}
+      propertyPath: reloadLevelScript
+      value: 
+      objectReference: {fileID: 1255051319}
     - target: {fileID: 1098275669875282947, guid: 793a8795e0874fb4bb61238ecc725fdb, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4293,6 +4297,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7088930633725141886, guid: fa8cdf51ef4116f46b0fbbe2bf2c4f65, type: 3}
   m_PrefabInstance: {fileID: 1245041511}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1255051319 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4660158561553807650, guid: 0b8b79a25d7ace0459ee54e6415a4ce5, type: 3}
+  m_PrefabInstance: {fileID: 4660158561485523912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73e17f05f36a5f45ae22074454eda09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1271325657
 PrefabInstance:
   m_ObjectHideFlags: 0
