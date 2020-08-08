@@ -22,11 +22,14 @@ public class ActivateByEnergy : MonoBehaviour
 
     private void Update()
     {
-        foreach (GameObject e in enemies)
+        if(enemyKill)
         {
-            if (e == null)
+            foreach (GameObject e in enemies)
             {
+                if (e == null)
+                {
 
+                }
             }
         }
         if (AllActive())
