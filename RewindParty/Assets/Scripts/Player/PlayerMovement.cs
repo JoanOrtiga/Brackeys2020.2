@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Transform light;
 
+    [SerializeField] private ReloadLevel reloadLevelScript;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(blood, transform.position, transform.rotation);
         light.parent = null;
         light.GetComponent<AtenuateLight>().enabled = true;
+        reloadLevelScript.ReloadThisLevelAfterTime(2.5f);
     }
 
     private void MoveAnim(Vector2 dir)

@@ -9,4 +9,14 @@ public class ReloadLevel : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ReloadThisLevelAfterTime(float time)
+    {
+        Invoke("Reload", time);
+    }
+
+    private void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
