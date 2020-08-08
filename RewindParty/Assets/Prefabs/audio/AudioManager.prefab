@@ -180,13 +180,13 @@ MonoBehaviour:
     startVolume: 0
   - name: Door
     clip: {fileID: 8300000, guid: 11cee8a125d37e14194b3bfb851dca0f, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
     startVolume: 0
   - name: Activate
     clip: {fileID: 8300000, guid: cfd2906e60cb14a478b7ff9fecf65893, type: 3}
-    volume: 1
+    volume: 0.75
     pitch: 1
     source: {fileID: 0}
     startVolume: 0
