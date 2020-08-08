@@ -90,7 +90,7 @@ public class BackTrackingBox : MonoBehaviour
                 goingBackPos = trackPositions[posIndex];
             }
 
-            transform.position = Vector2.Lerp(transform.position, goingBackPos, time / timeBetweenAnim);
+            transform.position = Vector2.Lerp(transform.position, goingBackPos, 0.1f);
         }
     }
 
