@@ -19,7 +19,7 @@ public class PressurePlate : EnergyActivators
     {
         string tag = collision.tag;
 
-        if(canPlayerActivate && tag == "Player" || canEnemyActivate && tag == "Enemy" || canBoxActivate && tag == "MoveableBox")
+        if(canPlayerActivate && tag == "Player" || (canEnemyActivate && tag == "Enemy" && Vector2.Distance(collision.transform.position, transform.position) < 0.3f) || canBoxActivate && tag == "MoveableBox")
         {
             imActive = true;
             AudioManager.AudioInstance.Play("Activate");
@@ -30,7 +30,7 @@ public class PressurePlate : EnergyActivators
     {
         string tag = collision.tag;
 
-        if (canPlayerActivate && tag == "Player" || canEnemyActivate && tag == "Enemy" || canBoxActivate && tag == "MoveableBox")
+        if (canPlayerActivate && tag == "Player" || (canEnemyActivate && tag == "Enemy" && Vector2.Distance(collision.transform.position, transform.position) < 0.3f) || canBoxActivate && tag == "MoveableBox")
         {
             imActive = true;
         }
