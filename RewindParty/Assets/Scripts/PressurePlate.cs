@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PressurePlate : EnergyActivators
 {
+    [SerializeField] private bool startActived = false;
     [Header("Who can activate it")]
     [SerializeField] private bool canPlayerActivate = true;
     [SerializeField] private bool canEnemyActivate = false;
     [SerializeField] private bool canBoxActivate = true;
+
+    private void Start()
+    {
+        imActive = startActived;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
