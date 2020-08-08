@@ -73,7 +73,6 @@ public class ActivateByEnergy : MonoBehaviour
 
     private bool AllActive()
     {
-        print(activators[0]);
         foreach (EnergyActivators item in activators)
         {
             if (!item.isActive())
