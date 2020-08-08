@@ -72,6 +72,14 @@ public class BoxMovement : MonoBehaviour
         {
             gettingMoved = false;
         }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (boxMovementScript.isBackTracking())
+            {
+                Destroy(collision.gameObject);
+                main.Shake(0.075f, 0.05f);
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

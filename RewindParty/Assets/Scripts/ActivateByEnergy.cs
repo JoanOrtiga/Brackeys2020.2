@@ -8,13 +8,27 @@ public class ActivateByEnergy : MonoBehaviour
 
     private Collider2D collider2;
     private bool shake = false;
+    [SerializeField]
+    private bool enemyKill = false;
+    private GameObject[] enemies;
     private void Start()
     {
         collider2 = GetComponent<BoxCollider2D>();
+        if(enemyKill)
+        {
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        }
     }
 
     private void Update()
     {
+        foreach (GameObject e in enemies)
+        {
+            if (e == null)
+            {
+
+            }
+        }
         if (AllActive())
         {
             collider2.enabled = false;
