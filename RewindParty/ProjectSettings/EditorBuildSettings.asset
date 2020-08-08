@@ -15,15 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Legacy/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Levels/4.unity
-    guid: baff2cfb5fa4af04f859f2fdaaf3f4f9
+    path: Assets/Scenes/Levels/lvl/1.unity
+    guid: 341d6a164e5525c488d536d3f46c637b
   - enabled: 1
-    path: Assets/Scenes/Levels/2.unity
-    guid: 2d3e40918ff75584fa93be824eb3926a
+    path: Assets/Scenes/Levels/lvl/2.unity
+    guid: 7ae5fc64fa9de8b46935531508ac95bd
   - enabled: 1
-    path: Assets/Scenes/Levels/3.unity
-    guid: d34cfa51ff3e64c478be5f78159c61e3
-  - enabled: 1
-    path: Assets/Scenes/Levels/4.unity
-    guid: 578701fed588a734088f3f7181e6d6cf
+    path: Assets/Scenes/Levels/lvl/3.unity
+    guid: 88ed379645b44164c8b503dfefbf2444
   m_configObjects: {}
