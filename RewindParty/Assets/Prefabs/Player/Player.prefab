@@ -111,7 +111,6 @@ GameObject:
   - component: {fileID: 1098275669875282950}
   - component: {fileID: 1098275669875282951}
   - component: {fileID: 1098275669875282946}
-  - component: {fileID: 46929690}
   - component: {fileID: 46929689}
   - component: {fileID: 46929691}
   m_Layer: 0
@@ -248,25 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blood: {fileID: 1515686630977805478, guid: 21c4e66fab99a5c4dac0ee1a4e581dee, type: 3}
   movementSpeed: 4
---- !u!95 &46929690
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098275669875282947}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a9d517669adb2e54a8fdf173d84e0217, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  reloadLevelScript: {fileID: 0}
 --- !u!114 &46929689
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -92,31 +92,23 @@ public class BoxMovement : MonoBehaviour
                 beforeMovingPos = BackTrackGrid.GetNearestPointOnGrid(transform.position);
                 movingToPos = movingTo();
 
-                Collider2D checkWall;
+                Collider2D[] checkWall;
 
-                checkWall = Physics2D.OverlapBox(movingToPos, new Vector2(0.95f, 0.95f), 0);
+                checkWall = Physics2D.OverlapBoxAll(movingToPos, new Vector2(0.95f, 0.95f), 0);
 
-                if (checkWall != null)
+                foreach (var item in checkWall)
                 {
-                    if (checkWall.tag == "Wall")
+                    if (item.tag == "Wall")
                     {
                         countdownBoxMovement = timeBoxMovement;
-                    }
-                    else
-                    {
-                        gettingMoved = true;
-                        main.Shake(0.075f, 0.01f);
-                        AudioManager.AudioInstance.Play("PushBox");
+
+                        return;
                     }
                 }
-                else
-                {
-                    gettingMoved = true;
-                    main.Shake(0.075f, 0.01f);
-                    AudioManager.AudioInstance.Play("PushBox");
-                }
 
-
+                gettingMoved = true;
+                main.Shake(0.075f, 0.01f);
+                AudioManager.AudioInstance.Play("PushBox");
             }
         }
         else if (collision.gameObject.CompareTag("Wall"))
