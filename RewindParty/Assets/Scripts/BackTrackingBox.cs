@@ -71,12 +71,13 @@ public class BackTrackingBox : MonoBehaviour
                     return;
                 }
 
-                Collider2D checkWall;
+                Collider2D[] checkWall;
 
-                checkWall = Physics2D.OverlapBox(trackPositions[posIndex], new Vector2(0.95f, 0.95f), 0);
+                checkWall = Physics2D.OverlapBoxAll(trackPositions[posIndex], new Vector2(0.95f, 0.95f), 0);
 
-                if (checkWall != null)
-                    if (checkWall.CompareTag("Wall"))
+                foreach (var item in checkWall)
+                {
+                    if (item.CompareTag("Wall"))
                     {
                         trackPositions.Clear();
 
@@ -85,6 +86,7 @@ public class BackTrackingBox : MonoBehaviour
 
                         return;
                     }
+                }
 
 
                 goingBackPos = trackPositions[posIndex];
