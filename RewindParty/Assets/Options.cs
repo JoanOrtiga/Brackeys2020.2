@@ -30,6 +30,9 @@ public class Options : MonoBehaviour
         resDropdown.AddOptions(options);
         resDropdown.value = currentResolution;
         resDropdown.RefreshShownValue();
+
+        musicVolume.value = 1;
+        sfxVolume.value = 1;
     }
     public void SetSFXVolume()
     {
