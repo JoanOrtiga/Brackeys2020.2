@@ -13,6 +13,6 @@ public class SoartingLayerByPosition : MonoBehaviour
 
     private void Update()
     {
-        spr.sortingOrder = (int)(Mathf.Round(transform.position.y) * -1);
+        spr.sortingOrder = (int)((transform.position.y) * -10);
     }
 }
