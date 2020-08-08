@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 1098275669875282946}
   - component: {fileID: 46929689}
   - component: {fileID: 46929691}
+  - component: {fileID: 961031736}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -267,13 +268,23 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 55b78ba1ed15b6250000000097b83835d96dc413bdd575ef
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
-  m_ShapePathHash: 0
+  - {x: -0.09313912, y: -0.31324434, z: 0}
+  - {x: -0.07213935, y: -0.42990744, z: 0}
+  - {x: 0.0745971, y: -0.41990265, z: 0}
+  - {x: 0.12648875, y: -0.30657429, z: 0}
+  - {x: 0.06792749, y: -0.11308965, z: 0}
+  - {x: -0.0019136323, y: 0.071046755, z: 0}
+  - {x: 0.0749121, y: 0.31549144, z: 0}
+  - {x: 0.21808665, y: 0.45168203, z: 0}
+  - {x: 0.17523754, y: 0.6117461, z: 0}
+  - {x: -0.11936479, y: 0.61523813, z: 0}
+  - {x: -0.15905668, y: 0.47612646, z: 0}
+  - {x: -0.09270716, y: 0.31549144, z: 0}
+  - {x: -0.019373732, y: 0.064062685, z: 0}
+  - {x: -0.105488844, y: -0.11975953, z: 0}
+  m_ShapePathHash: 318559763
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28990
+  m_InstanceId: -496622
 --- !u!114 &46929691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,3 +298,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   footsteptsSpeed: 0.25
+--- !u!114 &961031736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098275669875282947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8786d3bfc84b6a4b80e463dd62ea0f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 4
